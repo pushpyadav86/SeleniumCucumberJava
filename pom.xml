@@ -108,7 +108,7 @@
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
-                        <env>${env}</env>
+                        <!-- <env>${env}</env> -->
                     </systemPropertyVariables>
                 </configuration>
           
