@@ -4,7 +4,7 @@
 <suite name="CrossBrowserSuite">
     <test name="ChromeTest">
         <parameter name="browser" value="chrome"/>
-        <parameter name="env" value="qa"/>
+        <!-- <parameter name="env" value="qa"/> -->
         <classes>
             <class name="TestRunner.TestRunner"/>
         </classes>
