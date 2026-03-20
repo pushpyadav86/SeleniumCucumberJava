@@ -26,25 +26,24 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"browser", "env"})
-    public void setParameters(@Optional("chrome") String browser,
-                              @Optional("qa") String env) {
+    public void setParameters(@Optional("chrome") String browser{
 
         String finalBrowser = System.getProperty("browser");
-        String finalEnv = System.getProperty("env");
+        // String finalEnv = System.getProperty("env");
 
         if (finalBrowser == null || finalBrowser.isBlank()) {
             finalBrowser = browser;
         }
 
-        if (finalEnv == null || finalEnv.isBlank()) {
-            finalEnv = env;
-        }
+        // if (finalEnv == null || finalEnv.isBlank()) {
+        //     finalEnv = env;
+        // }
 
         System.setProperty("browser", finalBrowser);
-        System.setProperty("env", finalEnv);
+        // System.setProperty("env", finalEnv);
 
         System.out.println("Browser selected: " + finalBrowser);
-        System.out.println("Environment selected: " + finalEnv);
+        // System.out.println("Environment selected: " + finalEnv);
     }
 
     @Override
