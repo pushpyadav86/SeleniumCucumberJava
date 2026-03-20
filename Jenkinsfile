@@ -6,6 +6,10 @@ pipeline {
        
     }
 
+    parameters {
+        choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Choose browser')
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -25,18 +29,31 @@ pipeline {
             }
         }
 
-        stage('Publish Cucumber Report') {
-            steps {
-                publishHTML(target: [
-                    reportDir: 'target',
-                    reportFiles: 'cucumber-report.html',
-                    reportName: 'Cucumber Report',
-                    keepAll: true,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: true
-                ])
-            }
-        }
+       stage('Publish Cucumber Report') {
+    steps {
+        publishHTML(target: [
+            reportDir: 'target',
+            reportFiles: 'cucumber-report.html',
+            reportName: 'Cucumber Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true,
+            allowMissing: true
+        ])
+    }
+}
+
+        stage('Publish Extent Report') {
+    steps {
+        publishHTML(target: [
+            reportDir: 'test-output/SparkReport',
+            reportFiles: 'index.html',
+            reportName: 'Extent Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true,
+            allowMissing: true
+        ])
+    }
+}
     }
 
     post {
