@@ -25,7 +25,7 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @BeforeClass(alwaysRun = true)
-    @Parameters({"browser", "env"})
+    @Parameters("browser")
     public void setParameters(@Optional("chrome") String browser) {
 
         String finalBrowser = System.getProperty("browser");
