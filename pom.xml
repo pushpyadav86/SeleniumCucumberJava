@@ -103,14 +103,15 @@
             <version>3.0.0-M7</version>
 
             <configuration>
-                <!-- Run only runner classes -->
-                <includes>
-                    <include>**/*TestRunner.java</include>
-                </includes>
-
-                <!-- Optional: Ignore failures -->
-                <testFailureIgnore>false</testFailureIgnore>
-            </configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <browser>${browser}</browser>
+                        <!-- <env>${env}</env> -->
+                    </systemPropertyVariables>
+                </configuration>
+          
         </plugin>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -125,10 +126,6 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.3.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
