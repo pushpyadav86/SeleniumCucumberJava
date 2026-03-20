@@ -891,3 +891,42 @@
 [2026-03-19 18:55:43] INFO  StepDef - User entered last name in last name box.
 [2026-03-19 18:55:43] INFO  StepDef - User entered employee iD  in ID box.
 [2026-03-19 18:55:44] INFO  StepDef - Quited driver
+[2026-03-19 20:58:22] INFO  StepDef - Open URL
+[2026-03-19 20:58:28] INFO  StepDef - Quited driver
+[2026-03-19 20:58:34] INFO  StepDef - Open URL
+[2026-03-19 20:58:54] INFO  StepDef - Quited driver
+[2026-03-19 20:58:59] INFO  StepDef - Open URL
+[2026-03-19 20:59:19] INFO  StepDef - Quited driver
+[2026-03-19 22:19:39] INFO  StepDef - Open URL
+[2026-03-19 22:19:40] INFO  StepDef - Entered username and password
+[2026-03-19 22:19:41] WARN  StepDef - Clicked on login button
+[2026-03-19 22:19:44] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:19:44] INFO  StepDef - Clicked on User menu
+[2026-03-19 22:19:45] INFO  StepDef - Clicked on logout button
+[2026-03-19 22:19:48] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:19:48] INFO  StepDef - Driver closed
+[2026-03-19 22:19:48] INFO  StepDef - Quited driver
+[2026-03-19 22:19:51] INFO  StepDef - Open URL
+[2026-03-19 22:19:52] INFO  StepDef - Entered username and password
+[2026-03-19 22:19:52] WARN  StepDef - Clicked on login button
+[2026-03-19 22:19:55] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:19:56] INFO  StepDef - Clicked on Admin button.
+[2026-03-19 22:19:59] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:19:59] INFO  StepDef - Entered username in username text box.
+[2026-03-19 22:19:59] INFO  StepDef - Clicked on search button.
+[2026-03-19 22:20:00] INFO  StepDef - Quited driver
+[2026-03-19 22:20:04] INFO  StepDef - Open URL
+[2026-03-19 22:20:05] INFO  StepDef - Entered username and password
+[2026-03-19 22:20:05] WARN  StepDef - Clicked on login button
+[2026-03-19 22:20:08] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:20:12] INFO  StepDef - User clicked on PIM button.
+[2026-03-19 22:20:15] WARN  StepDef - Dashboard URL verified
+[2026-03-19 22:20:16] INFO  StepDef - User clicked on add button.
+[2026-03-19 22:20:16] INFO  StepDef - User entered first name in first name box.
+[2026-03-19 22:20:16] INFO  StepDef - User entered last name in last name box.
+[2026-03-19 22:20:16] INFO  StepDef - User entered employee iD  in ID box.
+[2026-03-19 22:20:17] INFO  StepDef - User clicks on the save button.
+[2026-03-19 22:20:26] INFO  StepDef - User clicked on PIM button.
+[2026-03-19 22:20:26] INFO  StepDef - Clicked on search button.
+[2026-03-19 22:20:26] INFO  StepDef - Driver closed
+[2026-03-19 22:20:27] INFO  StepDef - Quited driver

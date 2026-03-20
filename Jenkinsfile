@@ -28,7 +28,7 @@ pipeline {
             steps {
                 junit 'target/surefire-reports/*.xml'
             }
-        }
+       }
     }
 
     post {
