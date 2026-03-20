@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         maven 'MyMaven'
-       
     }
 
     parameters {
@@ -22,47 +21,37 @@ pipeline {
                 bat "mvn clean test -Dbrowser=${params.BROWSER}"
             }
         }
-
-        stage('Publish JUnit Report') {
-            steps {
-                junit 'target/surefire-reports/*.xml'
-            }
-        }
-
-       stage('Publish Cucumber Report') {
-    steps {
-        publishHTML(target: [
-            reportDir: 'target',
-            reportFiles: 'cucumber-report.html',
-            reportName: 'Cucumber Report',
-            keepAll: true,
-            alwaysLinkToLastBuild: true,
-            allowMissing: true
-        ])
-    }
-}
-
-        stage('Publish Extent Report') {
-    steps {
-        publishHTML(target: [
-            reportDir: 'test-output/SparkReport',
-            reportFiles: 'index.html',
-            reportName: 'Extent Report',
-            keepAll: true,
-            alwaysLinkToLastBuild: true,
-            allowMissing: true
-        ])
-    }
-}
     }
 
     post {
         always {
+            junit 'target/surefire-reports/*.xml'
+
+            publishHTML(target: [
+                reportDir: 'target',
+                reportFiles: 'cucumber-report.html',
+                reportName: 'Cucumber Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
+            ])
+
+            publishHTML(target: [
+                reportDir: 'test-output/SparkReport',
+                reportFiles: 'index.html',
+                reportName: 'Extent Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
+            ])
+
             archiveArtifacts artifacts: 'target/**/*.*, test-output/**/*.*, screenshots/**/*.*', allowEmptyArchive: true
         }
+
         success {
             echo 'Pipeline executed successfully.'
         }
+
         failure {
             echo 'Pipeline execution failed.'
         }
