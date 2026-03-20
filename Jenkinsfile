@@ -23,11 +23,31 @@ pipeline {
             }
         }
 
-        stage('Publish JUnit Report') {
-            steps {
-                junit 'target/surefire-reports/*.xml'
-            }
-        }
+       stage('Publish JUnit Report') {
+    steps {
+        junit 'target/surefire-reports/*.xml'
+    }
+}
+
+stage('Publish Cucumber Report') {
+    steps {
+        publishHTML([
+            reportDir: 'target',
+            reportFiles: 'cucumber-report.html',
+            reportName: 'Cucumber Report'
+        ])
+    }
+}
+
+stage('Publish Extent Report') {
+    steps {
+        publishHTML([
+            reportDir: 'test-output/SparkReport',
+            reportFiles: 'index.html',
+            reportName: 'Extent Report'
+        ])
+    }
+}
     }
 
     post {
