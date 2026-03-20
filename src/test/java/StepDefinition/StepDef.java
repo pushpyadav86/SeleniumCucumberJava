@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 
 import PageObject.AdminPage;
 import PageObject.DashboardPage;
@@ -34,13 +35,17 @@ public class StepDef extends BaseTest{
 	    FileInputStream file = new FileInputStream("config.properties");
 	    properties.load(file);
 	    
-	    String browser = properties.getProperty("browser");
+	    String browser = System.getProperty("browser");
+	    
+	    if (browser == null || browser.isBlank()) {
+	        browser = properties.getProperty("browser");
+	    }
 	    
 	    switch(browser.toLowerCase()) {
 	    case "chrome": driver = new ChromeDriver(); break;
 	    case "firefox": driver = new FirefoxDriver(); break;
 	    case "edge": driver = new EdgeDriver(); break;
-	    default: System.out.println("Invalid browser name.");
+	    default: System.out.println("Invalid browser name."); return;
 	    }
 	    
 	    driver.manage().window().maximize();

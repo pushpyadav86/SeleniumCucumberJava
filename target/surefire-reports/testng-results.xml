@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-17T19:54:15 CDT" name="Surefire suite" finished-at="2026-03-17T19:54:29 CDT" duration-ms="14011">
+  <suite started-at="2026-03-19T16:54:38 CDT" name="Surefire suite" finished-at="2026-03-19T16:55:45 CDT" duration-ms="66153">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@17046283]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@72057ecf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-03-17T19:54:15 CDT" name="Surefire test" finished-at="2026-03-17T19:54:29 CDT" duration-ms="14011">
+    <test started-at="2026-03-19T16:54:38 CDT" name="Surefire test" finished-at="2026-03-19T16:55:45 CDT" duration-ms="66153">
       <class name="TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.TestRunner@17046283]" started-at="2026-03-17T19:54:15 CDT" name="setUpClass" finished-at="2026-03-17T19:54:16 CDT" duration-ms="557" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.TestRunner@72057ecf]" started-at="2026-03-19T16:54:38 CDT" name="setUpClass" finished-at="2026-03-19T16:54:39 CDT" duration-ms="872" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@23a918c7]]>
+                <![CDATA[org.testng.TestRunner@6f867b0c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@17046283]" started-at="2026-03-17T19:54:16 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-17T19:54:29 CDT" duration-ms="13302" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@72057ecf]" started-at="2026-03-19T16:54:39 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-19T16:54:56 CDT" duration-ms="16472" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunner@17046283]" started-at="2026-03-17T19:54:29 CDT" name="tearDownClass" finished-at="2026-03-17T19:54:29 CDT" duration-ms="120" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@72057ecf]" started-at="2026-03-19T16:54:56 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-19T16:55:19 CDT" duration-ms="23580" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search customer by Nmae from Admin page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee ID not found in table: Prueba1 expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee ID not found in table: Prueba1 expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at StepDefinition.AdminTest.user_should_found_in_the_admin_table(AdminTest.java:44)
+at ✽.user should found "Prueba1" in the admin table(file:///C:/Users/pushp/eclipse-workspace/OrangeHRM/./Feature/login.feature:24)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner@72057ecf]" started-at="2026-03-19T16:55:19 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-19T16:55:44 CDT" duration-ms="24672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add Employee and Search from PIM page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunner@72057ecf]" started-at="2026-03-19T16:55:44 CDT" name="tearDownClass" finished-at="2026-03-19T16:55:45 CDT" duration-ms="488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

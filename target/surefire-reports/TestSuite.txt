@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.44 s -- in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 66.68 s <<< FAILURE! -- in TestSuite
+TestRunner.TestRunner.runScenario["Search customer by Nmae from Admin page", "Login"](2) -- Time elapsed: 23.44 s <<< FAILURE!
+java.lang.AssertionError: Employee ID not found in table: Prueba1 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at StepDefinition.AdminTest.user_should_found_in_the_admin_table(AdminTest.java:44)
+	at ✽.user should found "Prueba1" in the admin table(file:///C:/Users/pushp/eclipse-workspace/OrangeHRM/./Feature/login.feature:24)
+
