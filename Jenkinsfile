@@ -5,8 +5,14 @@ pipeline {
         maven 'MyMaven'
     }
 
+     triggers {
+        cron('H 9 * * 1-5')
+    }
+
     parameters {
         choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Choose browser')
+        choice(name: 'ENV', choices: ['qa', 'uat', 'prod'], description: 'Choose environment')
+        choice(name: 'SUITE_FILE', choices: ['testng.xml', 'crossBrowserTest.xml'], description: 'Choose TestNG suite file')
     }
 
     stages {
@@ -18,7 +24,7 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                bat "mvn clean test -Dbrowser=${params.BROWSER}"
+                bat "mvn clean test -DsuiteXmlFile=${params.SUITE_FILE} -Dbrowser=${params.BROWSER} -Denv=${params.ENV}"
             }
         }
     }
