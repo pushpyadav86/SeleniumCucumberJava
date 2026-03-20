@@ -36,18 +36,18 @@ public class StepDef extends BaseTest{
 	    properties.load(file);
 	    
 	    String browser = System.getProperty("browser");
-        String env = System.getProperty("env");
+        // String env = System.getProperty("env");
 
         if (browser == null || browser.isBlank()) {
             browser = properties.getProperty("browser");
         }
 
-        if (env == null || env.isBlank()) {
-            env = properties.getProperty("env");
-        }
+        // if (env == null || env.isBlank()) {
+        //     env = properties.getProperty("env");
+        // }
 
         System.out.println("Running on browser: " + browser);
-        System.out.println("Running on environment: " + env);
+        // System.out.println("Running on environment: " + env);
 	    
 	    switch(browser.toLowerCase()) {
 	    case "chrome": driver = new ChromeDriver(); break;
