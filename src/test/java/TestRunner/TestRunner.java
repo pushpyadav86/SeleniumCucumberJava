@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = "./Feature",
-    glue = {"StepDefination", "hooks"},
+    glue = {"StepDefinition", "hooks"},
     monochrome = true,
     dryRun = false,
     plugin = {
