@@ -11,7 +11,7 @@ pipeline {
 
     parameters {
         choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Choose browser')
-        // choice(name: 'ENV', choices: ['qa', 'uat', 'prod'], description: 'Choose environment')
+      
         choice(name: 'SUITE_FILE', choices: ['testng.xml', 'crossBrowserTest.xml'], description: 'Choose TestNG suite file')
     }
 
